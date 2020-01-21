@@ -1,0 +1,16 @@
+{
+  "name": "controller",
+  "version": "1.0.0",
+  "description": "",
+  "main": "loginservice.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "generate-password": "^1.4.2",
+    "nodemailer": "^6.4.2"
+  }
+}
