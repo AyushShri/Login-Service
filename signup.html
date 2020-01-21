@@ -1,0 +1,32 @@
+<html>
+<body>
+	<div>email</div><input type="email" id="email">
+	<br>
+	<br>
+	<script type=text/javascript>
+	
+	function tq() {
+		var em=document.getElementById("email").value;
+		alert("Thank You For Signing Up.\n Your password has been sent to your Email Address");
+		let req = {};
+		req.id = em;
+		console.log(req);
+		
+		let request = fetch('http://localhost:5000/test', {
+			method : "POST",
+			headers : {'Content-type': 'application/json'},
+			body : JSON.stringify(req)
+		});
+		request.then(res => {
+			console.log(res);
+		})
+		
+
+	}
+	</script>
+
+	<button onclick="tq()">Submit</button>
+
+</body>
+
+</html>

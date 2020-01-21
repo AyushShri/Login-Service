@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sign in</title>
+	<script type="text/javascript">
+	function x() {
+		var em=document.getElementById("email").value;
+		var pw=document.getElementById("password").value;
+		console.log(em);
+		console.log(pw);
+
+		let req = {};
+		req.id = em;
+		req.pass = pw;
+		req.action = 'login';
+
+		console.log(req);
+
+		let request = fetch('http://localhost:5000/test', {
+			method : "POST",
+
+			body : JSON.stringify(req)
+		});
+		request.then(res => {
+			console.log(res);
+		})
+	}
+		
+		
+	</script>
+	
+</head>
+<body>
+	<div>email</div><input type="email" id="email">
+	<br>
+	<br>
+	<div>password</div><input type="password" id="password">
+	<br>
+	<br>
+	
+		
+
+	<button onclick="x()">submit</button>
+
+</body>
+</html>
